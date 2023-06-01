@@ -31,3 +31,5 @@ Route::get('/portfolio',[\App\Http\Controllers\Front\PortfolioController::class,
 Route::get('/login',[\App\Http\Controllers\Backend\AuthController::class,'index']);
 
 Route::get('/forgot',[\App\Http\Controllers\Backend\AuthController::class,'forgot']);
+
+route::get('admin/dashboard',[\App\Http\Controllers\Backend\DashboardController::class,'index']);
