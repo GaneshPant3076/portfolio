@@ -33,3 +33,18 @@ Route::get('/login',[\App\Http\Controllers\Backend\AuthController::class,'index'
 Route::get('/forgot',[\App\Http\Controllers\Backend\AuthController::class,'forgot']);
 
 route::get('admin/dashboard',[\App\Http\Controllers\Backend\DashboardController::class,'index']);
+
+route::get('admin/home',[\App\Http\Controllers\Backend\DashboardController::class,'home_dash']);
+
+
+route::get('admin/about',[\App\Http\Controllers\Backend\DashboardController::class,'about']);
+
+
+route::get('admin/portfolio',[\App\Http\Controllers\Backend\DashboardController::class,'portfolio']);
+
+
+route::get('admin/contact',[\App\Http\Controllers\Backend\DashboardController::class,'contact']);
+
+route::get('admin/blog',[\App\Http\Controllers\Backend\DashboardController::class,'blog']);
+
+
