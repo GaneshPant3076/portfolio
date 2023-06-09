@@ -28,9 +28,9 @@ Route::get('/about',[\App\Http\Controllers\Front\AboutController::class,'index']
 
 Route::get('/portfolio',[\App\Http\Controllers\Front\PortfolioController::class,'index']);
 
-Route::get('/login',[\App\Http\Controllers\Backend\AuthController::class,'index']);
+// Admin
 
-Route::get('/forgot',[\App\Http\Controllers\Backend\AuthController::class,'forgot']);
+Route::group(['middleware' => 'admin'], function(){
 
 route::get('admin/dashboard',[\App\Http\Controllers\Backend\DashboardController::class,'index']);
 
@@ -46,5 +46,11 @@ route::get('admin/portfolio',[\App\Http\Controllers\Backend\DashboardController:
 route::get('admin/contact',[\App\Http\Controllers\Backend\DashboardController::class,'contact']);
 
 route::get('admin/blog',[\App\Http\Controllers\Backend\DashboardController::class,'blog']);
+});
 
 
+Route::get('/login',[\App\Http\Controllers\Backend\AuthController::class,'index']);
+
+Route::post('/login/admin',[\App\Http\Controllers\Backend\AuthController::class,'logina']);
+
+Route::get('/forgot',[\App\Http\Controllers\Backend\AuthController::class,'forgot']);

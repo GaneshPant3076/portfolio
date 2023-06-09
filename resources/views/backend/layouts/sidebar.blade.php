@@ -105,7 +105,7 @@
                      <li class="nav-item">
                          <a href="{{ url('admin/portfolio') }}"
                              class="nav-link @if (Request::Segment(2) == 'portfolio') active @endif)">
-                             <i class="nav-icon far fa-image"></i>
+                             <i class="nav-icon fa fa-briefcase"></i>
                              <p>
                                  Portfolio
                              </p>
@@ -114,7 +114,7 @@
                      <li class="nav-item">
                          <a href="{{ url('admin/contact') }}"
                              class="nav-link @if (Request::Segment(2) == 'contact') active @endif)">
-                             <i class="nav-icon far fa-image"></i>
+                             <i class="nav-icon 	fas fa-address-book"></i>
                              <p>
                                  Contact
                              </p>
@@ -123,7 +123,7 @@
                      <li class="nav-item">
                          <a href="{{ url('admin/blog') }}"
                              class="nav-link @if (Request::Segment(2) == 'blog') active @endif)">
-                             <i class="nav-icon far fa-image"></i>
+                             <i class="nav-icon fas fa-blog"></i>
                              <p>
                                  Blog
                              </p>
